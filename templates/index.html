@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Tanzil Mohiuddin - Data Science & ML Engineer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for radar chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">TANZIL</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-animated"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Hi, I'm</span>
+                    <span class="hero-name">Mohammed Tanzil Mohiuddin</span>
+                </h1>
+                <h2 class="hero-subtitle animated-text">
+                    <span id="typed-role">Data Science &amp; Machine Learning Engineer</span>
+                </h2>
+                <p class="hero-description">
+                    I build intelligent solutions with AI, Computer Vision, and NLP.<br>
+                    Let's turn data into actionable insights together.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="{{ url_for('download_resume') }}" class="btn btn-primary">Download Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/MohammedTanzil1323" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/tanzil13" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="hero-avatar-card glass-card floating">
+                <div class="avatar-img">
+                    <img src="{{ url_for('static', filename='TANZIL-PP.jpg') }}" alt="Profile Photo">
+                </div>
+                <div class="avatar-info">
+                    <h3>Data Science Enthusiast</h3>
+                    <p>B.Tech Electronics &amp; Communication</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a recent graduate with a Bachelor of Technology in Electronics and Communication Engineering, 
+                        passionate about data science with a solid foundation in deep learning, computer vision, and machine learning. 
+                        My technical expertise includes Python, TensorFlow, PyTorch, and various data manipulation and analysis libraries.
+                    </p>
+                    <p>
+                        I am eager to leverage my analytical skills and project experience to contribute effectively to challenging 
+                        roles in Data Science, Data Analysis, or Machine Learning Engineering. My goal is to apply innovative 
+                        techniques to extract insights and build intelligent solutions, making a tangible impact in a dynamic industry.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2</h3>
+                            <p>Internships</p>
+                        </div>
+                        <div class="stat">
+                            <h3>6</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <h3>Education</h3>
+                        <p><strong>B.Tech Electronics & Communication Engineering</strong></p>
+                        <p>Kakatiya Institute of Technology and Science</p>
+                        <p>CGPA: 7.77/10</p>
+                        <p>2020 - 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-flex">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>C</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>TensorFlow</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>PyTorch</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Scikit-learn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Computer Vision</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-line"></i> Data Analysis</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>NumPy</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Pandas</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Matplotlib</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Time Series Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-robot"></i> AI & NLP</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>LangChain</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>HuggingFace</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>NLTK</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>RAG Systems</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Flask</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Streamlit</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Azure ML</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-chart">
+                    <canvas id="skillsRadar" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">ML/AI</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="ml web">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>RAG-based Document QA System</h3>
+                        <p>Advanced document question-answering system integrating Gemma models and Groq API with FAISS vector database for efficient similarity search.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>LangChain</span>
+                            <span>Streamlit</span>
+                            <span>Groq API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                            <a href="https://github.com/MohammedTanzil1323/InsightFinder-Smart-Query-Response-from-Research-Papers" class="btn btn-small btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="cv ml">
+                    <div class="project-image">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automated Road Damage Detection</h3>
+                        <p>Implemented YOLOv8 for automated road damage detection with 0.612 mAP performance using multinational dataset.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLOv8</span>
+                            <span>Computer Vision</span>
+                            <span>CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                            <a href="https://github.com/rafiyanusrath/TriNit-_Centauri_ML_01" class="btn btn-small btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Brain Tumor Detection</h3>
+                        <p>Implemented Real-ESRGAN and YOLOv8 for enhanced brain tumor detection achieving 94.4% accuracy in medical images.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>PyTorch</span>
+                            <span>Real-ESRGAN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                            <a href="https://github.com/MohammedTanzil1323/Fusion-of-Esrgan-and-Yolov8-for-Tumor-Detection" class="btn btn-small btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Maintenance for TurboFan Engine</h3>
+                        <p>Machine learning model to predict Remaining Useful Life (RUL) of turbofan engines achieving R-squared value of 0.9432.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NumPy</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                            <a href="https://github.com/MohammedTanzil1323/Predictive-Maintainance-For-TurboFan-Engine" class="btn btn-small btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>MultiSource-AI-Assistant</h3>
+                        <p>Interactive web application using Streamlit and LangChain for advanced web searching through multiple sources, including DuckDuckGo, Arxiv, Wikipedia, and Yahoo Finance. Integrated ChatGroq API with LLaMA for intelligent response generation.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>LangChain</span>
+                            <span>ChatGroq API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                            <a href="https://github.com/MohammedTanzil1323/MultiSource-AI-Assistant" class="btn btn-small btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card" data-category="cv">
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>COVID-19 Impact Analysis on Indian Commodity Markets</h3>
+                        <p>Analyzed three months of Indian commodity prices during the COVID-19 pandemic using Selenium, Pandas, and data visualization to uncover crucial market trends and fluctuations.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MohammedTanzil1323/Impact-of-Covid-19-Analysis-on-Indian-Commodities" class="btn btn-small">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 7 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Diabetes Detection Using Random Forest</h3>
+                        <p>Developed and deployed a highly accurate diabetes detection model using Random Forest Classifier and Flask, aiding early diagnosis and supporting global public health initiatives.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Random Forest</span>
+                            <span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MohammedTanzil1323/Diabetes-demo" class="btn btn-small">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 8 -->
+                <div class="project-card" data-category="cv">
+                    <div class="project-image">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Object Detection with SSD MobileNet V3</h3>
+                        <p>Created a real-time object detection application using SSD MobileNet V3, enabling efficient identification and labeling of objects in various scenarios.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Modal -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Machine Learning Intern</h3>
+                    <p><strong>Movidu Technology Pvt Ltd</strong> | Dec 2021 – Feb 2022 | Remote, India</p>
+                    <ul>
+                        <li>Conducted research and data collection on restaurant reviews, employing NLP for sentiment analysis and topic modeling.</li>
+                        <li>Developed CNN models for image recognition (CIFAR-10) and face mask detection using OpenCV.</li>
+                        <li>Implemented deep learning models for news classification and real-time video analysis.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Data Science & Cloud Solutions Intern</h3>
+                    <p><strong>3cortex</strong> | Jun 2022 – Jul 2022 | Remote, India</p>
+                    <ul>
+                        <li>Developed proficiency in data analysis, visualization, and problem-solving with real-world datasets.</li>
+                        <li>Forecasted sales using Linear Regression in MS Excel and performed data-driven fraud detection.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-list">
+                <ul>
+                    <li>Runner up - ‘Get Set Debug’ coding competition, KITS Warangal</li>
+                    <li>Finalist - TRINIT Hackathon 3.0, by NIT Warangal, NIT Trichy, NIT Surathkal, Visa</li>
+                </ul>
+            </div>
+            <div class="certifications-list">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>System Design Through Verilog, IIT Guwahati - NPTEL (2022)</li>
+                    <li>Data Base Management System, IIT Kharagpur - NPTEL (2023)</li>
+                    <li>Python for Data Science, IIT Madras - NPTEL (2023)</li>
+                    <li>Build Basic Generative Adversarial Networks (GANs), DeepLearning.AI - Coursera (2024)</li>
+                    <li>Build Better Generative Adversarial Networks (GANs), DeepLearning.AI - Coursera (2024)</li>
+                    <li>Machine Learning for Engineering and Science Applications, IIT Madras - NPTEL (2024)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Feed Section -->
+    <section id="github" class="github-feed">
+        <div class="container">
+            <h2 class="section-title">Latest GitHub Activity</h2>
+            <div id="githubFeed"></div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <form id="contactForm" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="formStatus"></div>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:tanzilmohiuddinm@gmail.com">tanzilmohiuddinm@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> +966 580970109 | +91 9381404437</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tanzil13" target="_blank">linkedin.com/in/tanzil13</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Warangal, India</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mohammed Tanzil Mohiuddin. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+                    
